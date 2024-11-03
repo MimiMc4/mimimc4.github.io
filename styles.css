@@ -1,0 +1,108 @@
+body {
+    background-image: url("/gif/night_background.gif");
+    background-repeat: repeat;
+
+    color:white;
+}
+
+#title-box {
+    background-color: rgba(22, 50, 91, 0.8);
+    border-style: groove;
+    border-color: #FFDC7F;
+
+    position: relative;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 5vh;
+
+}
+#title-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#title {
+    font-size: 40px;
+    font-weight: bold;
+    width: 20%;
+    margin-left: 2vh;
+}
+
+#title-text {
+    text-align: right;
+    width: 50%;
+}
+
+#title-links {
+    color: #FFDC7F;
+    text-decoration: none;
+}
+
+#marquee-container {
+    background-color: rgba(22, 50, 91, 0.8);
+
+    position: relative;
+    margin: auto;
+    width: calc(50% + 26px);
+    padding: 2px 10px;
+    margin-bottom: 10px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    display: flex;
+}
+
+
+#border {
+    position: relative;
+    margin: auto;
+    width: 50%;
+    padding: 10px;   
+    
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#main {
+    background-color: rgba(22, 50, 91, 0.8);
+    border-style: groove;
+    border-color: #FFDC7F;
+
+    position: relative;
+    width: 73%;
+    padding: 10px;
+
+    text-align: center;
+}
+
+#left-bar {
+    background-color: rgba(22, 50, 91, 0.8);
+    border-style: groove;
+    border-color: #FFDC7F;
+
+    position: relative;
+    width: 20%;
+    padding: 10px;
+
+    display: flex;
+}
+
+#img-container {
+    border-top: 1px solid white;
+    height:auto;    
+}
+
+#madohomu-img {
+    object-fit: cover;
+    width: 70%;
+    height: auto;
+}

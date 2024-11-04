@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <div id="title-box">
+    <img id="money-bill" src="gif/money_falling.gif">
+    <img id="money-coin" src="gif/coin.gif">
+    <div id="title-box" class="madoka-div">
         <div id="title-container">
             <div id="title">
                 mimi°•
@@ -29,16 +30,45 @@
         </marquee>
     </div>
     <div id="border">
-        <div id="left-bar">
-            <div>hell yeah</div>
+        <div id="left-bar" class="madoka-div">
             <div>hell yeah</div>
             <div>hell yeah</div>
             <div>hell yeah</div>
             <div>hell yeah</div>
             <img id="warning-img" src="img/warning.png"i>
         </div>
-        <div id="main">
+        <script>
+                document.getElementById("warning-img").addEventListener("click", XPwarn);
+
+                function XPwarn() {
+                    var audio = new Audio('audio/XP_error.mp3');
+                    audio.play();
+                    document.getElementById("warning-img").removeEventListener("click", slotWin);
+                    setTimeout(() => {
+                        document.getElementById("warning-img").addEventListener("click", slotWin);
+                        
+                    },1000)
+                }
+        </script>
+        <div id="main" class="madoka-div"> 
             <img id="premio-img" src="gif/premio.gif">
+            <script>
+                document.getElementById("premio-img").addEventListener("click", slotWin);
+
+                function slotWin() {
+                    var audio = new Audio('audio/Slot.mp3');
+                    audio.play();
+                    document.getElementById("premio-img").removeEventListener("click", slotWin);
+                    document.getElementById("money-bill").style.display = "block";
+                    document.getElementById("money-coin").style.display = "block";
+                    setTimeout(() => {
+                        document.getElementById("money-bill").style.display = "none";
+                        document.getElementById("money-coin").style.display = "none";
+                        document.getElementById("premio-img").addEventListener("click", slotWin);
+                        
+                    },3000)
+                }
+            </script>
             <h2 style="text-align: left;">
                meguka meguka meguka 
             </h2>

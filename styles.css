@@ -8,6 +8,12 @@ body {
     overflow-x: hidden;
 }
 
+.madoka-div{
+    background-color: rgba(22, 50, 91, 0.8);
+    border-style: groove;
+    border-color: #FFDC7F;
+}
+
 #money-bill {
     position: absolute;
     display: none;
@@ -25,10 +31,6 @@ body {
 }
 
 #title-box {
-    background-color: rgba(22, 50, 91, 0.8);
-    border-style: groove;
-    border-color: #FFDC7F;
-
     position: relative;
     margin: auto;
     width: 50%;
@@ -102,10 +104,6 @@ body {
 }
 
 #main {
-    background-color: rgba(22, 50, 91, 0.8);
-    border-style: groove;
-    border-color: #FFDC7F;
-
     position: relative;
     width: 73%;
     padding: 10px;
@@ -123,9 +121,6 @@ body {
 }
 
 #left-bar {
-    background-color: rgba(22, 50, 91, 0.8);
-    border-style: groove;
-    border-color: #FFDC7F;
 
     position: relative;
     width: 20%;

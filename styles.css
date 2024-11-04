@@ -14,6 +14,7 @@ body {
     position: relative;
     margin: auto;
     width: 50%;
+    min-width: 600px;
     padding: 10px;
     margin-bottom: 10px;
     margin-top: 5vh;
@@ -51,6 +52,7 @@ body {
     position: relative;
     margin: auto;
     width: calc(50% + 26px);
+    min-width: 626px;
     padding: 2px 10px;
     margin-bottom: 10px;
 
@@ -61,11 +63,16 @@ body {
     display: flex;
 }
 
+#katamari-img{
+    width: 10px;
+}
+
 
 #border {
     position: relative;
     margin: auto;
     width: 50%;
+    min-width: 600px;
     padding: 10px;   
     
     border-style: solid;
@@ -88,6 +95,12 @@ body {
     text-align: center;
 }
 
+#premio-img{
+    position: absolute;
+    right: -75px;
+    top:20px;
+}
+
 #left-bar {
     background-color: rgba(22, 50, 91, 0.8);
     border-style: groove;
@@ -97,9 +110,12 @@ body {
     width: 20%;
     padding: 10px;
 
-    display: flex;
-    flex-direction: column;
-    
+}
+
+#warning-img{
+    position: absolute;
+    left: -65px;
+    bottom:-50px;
 }
 
 #img-container {
@@ -133,4 +149,5 @@ body {
     width:20%;
     padding:2%;
 }
+
 

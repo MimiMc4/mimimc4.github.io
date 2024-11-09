@@ -118,9 +118,13 @@ body {
     text-align: center;
 }
 
+#main-text {
+    text-align: left;
+}
+
 #premio-img{
     position: absolute;
-    right: -90px;
+    right: -120px;
     top:20px;
 
     width: 130px;

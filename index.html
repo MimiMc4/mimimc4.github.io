@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>meguka_mimi°•</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="indexStyles.css">
     <link rel="icon" href="logos/logo-no-vect.png">
+
 </head>
 <body>
     <img id="money-bill" src="gif/money_falling.gif">
@@ -34,13 +35,19 @@
             <div>hell yeah</div>
             <div>hell yeah</div>
             <div>hell yeah</div>
-            <div>hell yeah</div>
+            <div>
+                <a href="index.html">• home</a>
+            </div>
+            <div>
+                <a href="about.html">• about</a>
+            </div>
             <img id="warning-img" src="img/warning.png"i>
         </div>
         <script>
                 document.getElementById("warning-img").addEventListener("click", XPwarn);
 
                 function XPwarn() {
+
                     var audio = new Audio('audio/XP_error.mp3');
                     audio.play();
                     document.getElementById("warning-img").removeEventListener("click", slotWin);
@@ -48,6 +55,23 @@
                         document.getElementById("warning-img").addEventListener("click", slotWin);
                         
                     },1000)
+                    XPclone();
+                }
+
+                function XPclone() {
+                    /*
+                    var myImg = document.createElement('img');
+                    myImg.setAttribute('src', "img/warning.png");
+
+                    var top = Math.random();
+                    top = top * 300;
+                    var left = Math.random();
+                    left = left * 300;
+                    myImg.style.top = top + "px";
+                    myImg.style.left = left + "px";
+
+                    document.getElementById('body').appendChild(myImg);
+                    */
                 }
         </script>
         <div id="main" class="madoka-div"> 
@@ -84,17 +108,19 @@
                     anime, manga, and visual novels.
                 </p>
                 <p>
-                    Feel free to explore and interact with whatever you find intetesting
-                    or funny ^^.
+                    Feel free to explore and click around,
+                    as I'm trying to make this website somewhat interactive ^^.
                 </p>
             </div>
             <div id="img-container">
                 <img id="madohomu-img" src="/gif/madohomu_cuddle_white.gif" />
                 <p>'I will... end suffering!'</p>
             </div>
+            <div style="font-size: 11px;"></div>
         </div>
     </div>
-    <div id="bottom-img-container">
+    <div id="random-word">hello </div>
+    <div class="homura-div" id="bottom-img-container">
         <img id="bottom-img" src="/gif/constructor.gif" />
         under construction
     </div>

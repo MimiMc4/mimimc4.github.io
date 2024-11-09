@@ -11,29 +11,28 @@ body {
     height: 100%;
 }
 
+a {
+    color: #FFDC7F;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #FFDC7F;
+}
+
 .madoka-div{
     background-color: rgba(22, 50, 91, 0.8);
     border-style: groove;
     border-color: #FFDC7F;
 }
 
-#money-bill {
-    position: absolute;
-    top:-5vh;
-    display: none;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-    object-fit: cover;
-}
+.homura-div{
+   background-color: rgba(22, 50, 91, 0.8);
 
-#money-coin {
-    position: absolute;
-    top:-5vh;
-    display: none;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
+    position: relative;
+    margin: auto;
+    margin-top: 5px;
+    object-fit: cover;
 }
 
 #title-box {
@@ -67,12 +66,6 @@ body {
     width: 50%;
 }
 
-
-#title-links {
-    color: #FFDC7F;
-    text-decoration: none;
-}
-
 #marquee-container {
     background-color: rgba(22, 50, 91, 0.8);
 
@@ -88,10 +81,6 @@ body {
     box-sizing: border-box;
 
     display: flex;
-}
-
-#katamari-img{
-    width: 10px;
 }
 
 
@@ -121,16 +110,6 @@ body {
 #main-text {
     text-align: left;
 }
-
-#premio-img{
-    position: absolute;
-    right: -120px;
-    top:20px;
-
-    width: 130px;
-    height: auto;
-}
-
 #left-bar {
 
     position: relative;
@@ -138,43 +117,3 @@ body {
     padding: 10px;
 
 }
-
-#warning-img{
-    position: absolute;
-    left: -65px;
-    bottom:-50px;
-}
-
-#img-container {
-    border-top: 1px solid white;
-    height:auto;    
-}
-
-#madohomu-img {
-    object-fit: cover;
-    width: 70%;
-    height: auto;
-}
-
-#bottom-img-container{
-    background-color: rgba(22, 50, 91, 0.8);
-
-    position: relative;
-    margin: auto;
-    margin-top: 5px;
-    object-fit: cover;
-    width: 20%; 
-
-    text-align: center;
-}
-
-#bottom-img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
-    width:20%;
-    padding:2%;
-}
-
-

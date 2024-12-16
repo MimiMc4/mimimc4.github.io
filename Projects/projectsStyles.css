@@ -21,6 +21,10 @@ a:visited {
     color: #FFDC7F;
 }
 
+p { 
+    text-indent: 30px;
+ }
+
 .madoka-div{
     background-color: rgba(22, 50, 91, 0.8);
     border-style: groove;

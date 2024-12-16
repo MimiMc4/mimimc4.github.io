@@ -22,9 +22,14 @@
     </div>
 
     <div id="marquee-container">
-        <marquee >
+        <marquee>
             <span >
                 let's go gambliiiiing &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                 X X X oh dang it
@@ -51,7 +56,7 @@
                 Slot machine linux command
             </h2>
             <div id="img-container">
-                <img src="gamble01.gif" width="40%" height="40%">
+                <img src="gamble01.gif" width="40%">
             </div>
             <div id="main-text">
                 <p>
@@ -63,8 +68,8 @@
                 </p>
                 <p>
                    We've been experimenting with different ways of manipulating the output of a program
-                   on the terminal, trying to change the color of the text and changing the position of the 
-                   cursor. We were screwing around when my friend had the idea of using what we've been
+                   on the terminal, trying to change the color of the text, changing the position of the 
+                   cursor, and things like that. We were screwing around when my friend had the idea of using what we've been
                    learning to make a gambling command that spawns a slot machine on your teminal. The "let's 
                    go gambling meme" has been living rent free on our minds and I instantly loved the idea so 
                    we got straight to work.
@@ -73,14 +78,48 @@
                     Before we started coding, we had to first decide what symbols we were going to use for the
                     slot machine. We made the decision to use unicode characters, because even if some terminals dont support
                     them, they are way better for this job than plain ascii characters. We ended up using the symbols
-                    of the 4 suits of french-suited playing cards to keep the gambling aesthetic, and the we chose to add 
-                    the classic lucky 7 that for some reason has really been asociated with slot machines.
+                    of the 4 suits of french-suited playing cards to keep the gambling aesthetic, and then we chose to add 
+                    the classic lucky 7 that for some reason has really been asociated with slot machines. For the color of the 
+                    symbols we used ansi scape codes, wich are special sequences of characters you put before your text that you can 
+                    use to format the output of your program.
+                </p>
+                <p>
+                   The code itself it's very simple. We have a string array that stores the 5 symbols with their respective ansi codes and
+                   also one index for each slot that is initialized randomly. 
+                   <br/>
+                   Then we have the main loops, that cycle through the symbols
+                   and write to the standard output on each iteration. In order to prevent the program to write each iteration on a new line,
+                   we use the special character \r that moves the cursor to the beggining of the line.
+                </p>
+                  <pre><code>
+                    for(int i = 0; i < 10; i++){
+                        s1 = symbols[i1++%5];
+                        s2 = symbols[i2++%5];
+                        s3 = symbols[i3++%5];
+                
+                        cout << "| [" + s1 + "][" + s2 + "][" + s3 + "] |"  ;
+                        flush(cout);
+                        cout << "\r";
+                
+                        nanosleep(&t,NULL);
+                    }
+                   </code></pre>
+                   <p>
+                    We have three loops, in the first one we iterate all three slots, then two, and finally only one. When all three have
+                    finished, we look at which symbols we have pulled, and print a message accordingly. For the messages we just basicaly
+                    wrote the first things that came to our minds, but it was really fun.
+                   </p>
+                <p>
+                    The only thing left was to compile and paste the binary into the PATH so the operating system can recognize it as a command.
+                    <br/>
+                    This was a really simple project but it was so much fun. If you want to gamble on your own computer or just take a look at the 
+                    code, you can check the  <a src="https://github.com/MimiMc4/gamble">github repository</a>. (It doesn't work on windows tho, so 
+                    take it into consideration)
                 </p>
             </div>
-            <div id="img-container">
-                <img src="gamble02.gif" width="40%" height="40%">
+            <div id="img-container"></div>
+                <img src="gamble02.gif" width="40%"> 
             </div>
-
         </div>
     </div>
 </body>

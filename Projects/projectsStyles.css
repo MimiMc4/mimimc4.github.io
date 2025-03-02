@@ -106,14 +106,14 @@ p {
 
 #main {
     position: relative;
-    width: 73%;
+    width: 100%;
     padding: 10px;
 
     text-align: center;
 }
 
 #main-text {
-    text-align: left;
+    text-align: center;
 }
 #left-bar {
 

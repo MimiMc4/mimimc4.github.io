@@ -70,21 +70,6 @@ a:active {
 
 }
 
-@media screen and (max-width: 700px){
-   #title-box{
-        width: auto;
-        float: none;
-   } 
-   #marquee-container{
-        width: auto;
-        float: none;
-   }
-   #border{
-        width: auto;
-        float: none;
-   }
-}
-
 #title-container {
     display: flex;
     justify-content: space-between;

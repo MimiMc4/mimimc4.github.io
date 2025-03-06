@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meguka_mimi°•</title>
+    <link rel="stylesheet" href="/textStyles.css">
+    <link rel="icon" href="/logos/logo-no-vect.png">
+    <script type="text/javascript" src="/js/functions.js"></script>
+
+</head>
+<body>
+    
+    <div id="title-box" class="madoka-div">
+        <div id="title-container">
+            <div id="title">
+               projects°•
+            </div>
+            <div id="title-text">
+                el tres en raya de toda la vida
+            </div>
+        </div>
+    </div>
+
+    <div id="back-box" class="madoka-div">
+        <a href="/projects.html">
+        <• back
+        </a>
+    </div>
+
+    <div id="marquee-container">
+        <marquee>
+            <span >
+                X X X i can't stop winning
+            </span>
+        </marquee>
+    </div>
+
+    <div id="border">
+        <div id="main" class="madoka-div"> 
+            <h2 style="text-align: left;">
+                Simple client-server TicTacToe game
+            </h2>
+            <div id="main-text">
+                <p>
+                    Computer networks is a subject that in paper looks cool, but due 
+                    to some external factors me and one of my friends (we had to do a 
+                    project together for this subject) don't really like. In fact, after
+                    the final exam we were pretty sure we were failing that class.
+                </p>
+                <p>
+                    The surprise came when we got our grades and we both passed. We had 
+                    to do something to celebrate, so we decided to make an online tic tac toe
+                    game using the things we had barely learned.
+                </p>
+                <div style="text-align: center;">
+                    <img style="width: 60%;" src="title.png">
+                </div>
+                <p>
+                    The idea was to make it similar to these games where you run the client
+                    that handles the interface and the input collection, that is connected to 
+                    the server wich handles all game logic. Doing this is unnecessarily complicated
+                    for a game like this, but I wanted to do it this way.
+                </p>
+                <p>
+                    We ended splitting the job kind of like in front and back end. I ended up handling
+                    all of the communication between the players and the server, and my friend focussed on
+                    making the interface and the game logic. 
+                    (Btw he refused to make the functions he made
+                    an external library so I had to just put it on the client file and it ended up being
+                    incredibly messy.)
+                </p>
+                <div style="text-align: center;">
+                    <img style="width: 40%;" src="empty_board.png">
+                </div>
+                <p>
+                    We used as a basis a simple client-server program we had to make for our class wich 
+                    was a server that counted the number of vowels the client sent. The program was 
+                    originaly in c, but mid way we started using c++ so it became a really ugly mess of 
+                    the two languages.
+                </p>
+                <p>
+                    The way the game works is very simple. The server has an array wich represents the board.
+                    Once both clients are connected, the servers sends them the board, and in each player's 
+                    turn, the client presents the board to the playes, and
+                    they select the number of the board square in wich they want to play. The client then 
+                    sends that number to the server wich then updates the board. This process is repeated until
+                    the server detects someone has winned. When someone wins, the server enables the end flag,
+                    wich is really just the last element of the board array, and the game ends.
+                </p>
+                <p>
+                    Even tough this game is made to be played via a local network, me and my friend were able
+                    to play it coneccting through ssh to our uni's remote work network and running there the 
+                    server and the clients.
+                </p>
+                <p>
+                   I had to work through many things not working while making this, but in the end it was really
+                   cool seeing our game being played "online", and it certainly was a good celebrations of having
+                   passed one of the worst subjects this far.
+                </p>
+                <div style="text-align: center;">
+                    <img style="width: 40%;" src="full_board.png">
+                </div>
+                <p>
+                    If you want to play this yourself, or just take a look at the code (I'm sorry), just take a look
+                    at the 
+                    <a href="https://github.com/MimiMc4/TicTacToe"> github repo</a>
+                    .
+                </p>
+                <p style="text-align: center;">Thanks for reading :)</p>
+            </div>
+        </div>
+    </div>
+    <div id="top-box" class="homura-div">
+         <a onclick="topFunction()" id="myBtn" title="Go to top">^ Top ^</a>
+    </div>
+
+</body>
+</html>

@@ -56,12 +56,6 @@
 
                     var audio = new Audio('audio/XP_error.mp3');
                     audio.play();
-                    document.getElementById("warning-img").removeEventListener("click", slotWin);
-                    setTimeout(() => {
-                        document.getElementById("warning-img").addEventListener("click", slotWin);
-                        
-                    },1000)
-                    XPclone();
                 }
 
                 function XPclone() {

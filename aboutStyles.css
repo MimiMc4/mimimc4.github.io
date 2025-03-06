@@ -88,6 +88,9 @@ a:active {
     display: flex;
 }
 
+#spring-img{
+   text-align: center;
+}
 
 #border {
     position: relative;

@@ -77,7 +77,7 @@
                    and write to the standard output on each iteration. In order to prevent the program to write each iteration on a new line,
                    we use the special character \r that moves the cursor to the beggining of the line.
                 </p>
-                  <pre><code>
+                  <pre>
                     for(int i = 0; i < 10; i++){
                         s1 = symbols[i1++%5];
                         s2 = symbols[i2++%5];
@@ -89,7 +89,7 @@
                 
                         nanosleep(&t,NULL);
                     }
-                   </code></pre>
+                   </pre>
                    <p>
                     We have three loops, in the first one we iterate all three slots, then two, and finally only one. When all three have
                     finished, we look at which symbols we have pulled, and print a message accordingly. For the messages we just basicaly

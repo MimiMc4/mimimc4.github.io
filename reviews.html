@@ -14,11 +14,21 @@
             <div id="title">
                 reviews°•
             </div>
-            <div id="title-text">
-                poner algo
+            <div style="cursor: pointer;" id="title-text">
+                click here
             </div>
         </div>
     </div>
+
+
+    <script>
+        document.getElementById("title-text").addEventListener("click", springAlarm);
+
+        function springAlarm() {
+            var audio = new Audio('audio/alarm.wav');
+            audio.play();
+        }
+    </script>
 
     <div id="marquee-container">
         <marquee >

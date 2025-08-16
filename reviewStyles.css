@@ -42,6 +42,38 @@ a:active {
     object-fit: cover;
 }
 
+.popup-container {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+}
+
+.trigger-element {
+    cursor: pointer;
+}
+
+.popup-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 300px;
+    padding: 15px;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+}
+
+.popup-container:hover .popup-content {
+    display: block;
+}
+
+.popup-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
 #title-box {
     position: relative;
     margin: auto;

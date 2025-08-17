@@ -43,6 +43,7 @@ a:active {
 #mobile-warning {
 
     position: fixed;
+    display: none;
     margin-top: 40%;
     left: 0;
     right: 0;

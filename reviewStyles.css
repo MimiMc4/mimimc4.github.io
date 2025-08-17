@@ -43,9 +43,11 @@ a:active {
 }
 
 .popup-container {
+    flex: 0 0 calc(33.333% - 10px);
+    max-width: calc(33.333% - 10px); 
+    box-sizing: border-box;
     position: relative;
     display: inline-block;
-    margin: 20px;
 }
 
 .trigger-element {
@@ -79,6 +81,7 @@ a:active {
 
 .flex-row{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 

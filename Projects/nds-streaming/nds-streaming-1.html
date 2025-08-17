@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meguka_mimi°•</title>
+    <link rel="stylesheet" href="/textStyles.css">
+    <link rel="icon" href="/logos/logo-no-vect.png">
+    <script type="text/javascript" src="/js/functions.js"></script>
+
+</head>
+<body>
+    
+    <div id="title-box" class="madoka-div">
+        <div id="title-container">
+            <div id="title">
+               projects°•
+            </div>
+            <div id="title-text">
+                Huh? No, retro consoles are like the NES and SNES, right? The NDS is still pretty new...
+            </div>
+        </div>
+    </div>
+
+    <div id="back-box" class="madoka-div">
+        <a href="/projects.html">
+        <• back
+        </a>
+    </div>
+
+    <div id="marquee-container">
+        <marquee>
+            <span >
+                They don't make consoles like this anymore. We forgot how to.
+            </span>
+        </marquee>
+    </div>
+
+    <div id="border">
+        <div id="main" class="madoka-div"> 
+            <h2 style="text-align: left;">
+                PC to NDS video streaming kinda thing
+                <span style="font-size: smaller;">[1]</span>
+            </h2>
+            <div id="main-text">
+                <p>
+                    During this summer, me and my cousin (who knows more about computers than me 
+                    despite being younger) decided to start a project together. He had the idea
+                    to stream video from the pc to the nds, and to send the inputs from the nds
+                    to the computer, in order to be able to play games on the nds via streaming.
+                    The idea was to be able to play a 3ds game on an emulator, and stream it to 
+                    the ds, wich would be pretty funny.
+                </p>
+                <p>
+                    In order to achieve this we had to be able to capture video on the client side 
+                    on the pc, and then send that to the server running in the ds, that would then 
+                    render the image and send back the inputs.
+                </p>
+                <p>
+                    My cousin didn't know much about network programming, and I'm still learning
+                    about graphics, so we kinda split the work that way. He would handle how the 
+                    client reads images from the screen, and I would handle how the communication
+                    works and how to display the images on the ds screen.
+                </p>
+                <p>
+                    All the testing in real hardware would be done on this beauty: 
+                </p>
+
+                <div style="display: flex; align-items: center; padding-left: 20%; padding-right: 13%;">
+                    <div style="width: 100%;">
+                        <img style="width: 90%;" src="nds-2.jpg">
+                    </div>
+                    <div style="width: 100%;">
+                        <img style="width: 90%;" src="nds-1.jpg">
+                    </div>
+                </div>
+                <p style="text-align: center; font-size: small;">
+                    - Nintendo DSi XL Chocolate  -
+                </p>
+
+                <p>
+                    For the server on the ds I used 
+                    <a href="https://libnds.devkitpro.org/">libnds</a>
+                    which is included on the 
+                    <a href="https://github.com/devkitPro/">devkitpro</a>
+                    toolchain. I really recommend devkitpro if you're looking for developing any kind 
+                    of homebrew program for a nintendo console.
+                </p>
+                <p>
+                    Looking through the libnds examples, I found out that you can use sockets like you
+                    would use them in a normal c program in linux, so using the examples and going through
+                    my assignments of my last year's computer networks class I setup a very simple test client
+                    and server. I was able to make a very simple program that showed the console's local ip 
+                    address and waited for messages. Then, on the client, you specified the ip address and port
+                    and you can send messages wich will be displayed on the bottom screen. 
+                </p>
+                <p>
+                    I don't have much footage because I wasn't planning on writting about this, but here you 
+                    can see how it waits for a conection:
+                </p>
+
+                <img style="width: 50%; padding-left: 25%;" src="test-messages.gif">
+
+                <p>
+                    Now we needed to decide how we were going to actually do the video streaming.
+                </p>
+                <p>
+                    Our first aproach was to just use the 2d engine and render a texture as a background.
+                    Then, we could recieve the color of each pixel and modify the texture acordingly.
+                </p>
+                <p>
+                    We needed as much speed as posible, and the loss of packages wasn't a concern because 
+                    the next one will come eventually, so we decided to use UDP sockets.
+                </p>
+                <p style="margin-top: 5%;">
+                    I was able to send some pixels to the ds and have them rendered, but here is where it starts 
+                    getting complicated. It turns out that the ds can't receive packages
+                    over roughly 1kB or 1,5kB, and the speed at wich it processes the packages is pretty slow too, 
+                    so our method had to change.
+                </p>
+                <p>
+                    We decided to use a system in which we send the first image, and then instead of sending more 
+                    images, we send the diference between the two frames. For example if a pixel has in frame A 
+                    an rgb value of (50,50,50), and on frame B of (50,50,100), we would send (0,0,50). This is very
+                    useful, because when there are few changes from frame A to frame B, there are few pixels with
+                    important data, and the rest are all 0, so it can be compressed to a lot less bytes, and we 
+                    can send more frames with the same bytes.
+                </p>
+                <p>
+                    We are using UDP, so packages will be lost. To prevent too much corruption, we will have to send 
+                    a normal image once in a while.
+                </p>
+                <p style="margin-top: 5%;">
+                    I still have to think about how will I manage all of this, and find out if the ds can handle it, 
+                    but meanwhile I'm also looking at how will I render the data we recieve.
+                </p>
+                <p>
+                    libnds provides a graphics API pretty similar to opengl to which I'm relatively familiar, so 
+                    the plan is to have a quad with a texture, and modify the texture manually writting to the 
+                    ds video ram. This way we can change on runtime the resolution of the video we are rendering.
+                </p>
+                <p>
+                    I'm still strugling to have a quad on screen so I'll have to keep working on it. I'll write
+                    another one of these when I'm more advanved on the project. Btw meanwhile my cousin has already
+                    managed to capture video from the pc, and transform it to any resolution. You can even decide
+                    if you want to capture the whole screen or just a window.
+                </p>
+
+                <p style="text-align: center;">Thanks for reading :)</p>
+            </div>
+        </div>
+    </div>
+    <div id="top-box" class="homura-div">
+         <a onclick="topFunction()" id="myBtn" title="Go to top">^ Top ^</a>
+    </div>
+</body>
+</html>

@@ -40,6 +40,15 @@ a:active {
     object-fit: cover;
 }
 
+#mobile-warning {
+
+    position: fixed;
+    display: none;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
 #money-bill {
     position: absolute;
     top:-5vh;

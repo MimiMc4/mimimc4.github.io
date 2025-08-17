@@ -9,6 +9,35 @@
 
 </head>
 <body>
+
+    <!-- Mobile warning, shouldn't display on pc-->
+    <div id="mobile-warning" class="madoka-div">
+        <p style="text-align: center;">
+            ⚠️ ⚠️ This page is intended for being viewed on a computer ⚠️ ⚠️
+        </p>
+        <p style="text-align: center;">
+            Keep in mind that it will be ugly if you are on your phone :(
+        </p>
+        <button id="close-warning" class="madoka-div" style="margin-left: 50%;" >❌ <a>close</a> ❌</button>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                const warning = document.getElementById("mobile-warning");
+                const closeBtn = document.getElementById("close-warning");
+
+                warning.style.display = "block";
+
+                closeBtn.addEventListener("click", function () {
+                    warning.style.display = "none";
+
+                });
+            }
+        });
+    </script>
+
+
+
     <img id="money-bill" src="gif/money_falling.gif">
     <img id="money-coin" src="gif/coin.gif">
     <div id="title-box" class="madoka-div">
@@ -124,11 +153,6 @@
         </div>
     </div>
     <div id="random-word">hello </div>
-    <!--
-    <div class="homura-div" id="bottom-img-container">
-        <img id="bottom-img" src="/gif/constructor.gif" />
-        under construction
-    </div>
-    -->
+
 </body>
 </html>

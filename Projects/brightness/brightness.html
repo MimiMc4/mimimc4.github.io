@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meguka_mimi°•</title>
+    <link rel="stylesheet" href="/textStyles.css">
+    <link rel="icon" href="/logos/logo-no-vect.png">
+    <script type="text/javascript" src="/js/functions.js"></script>
+
+</head>
+<body>
+    
+    <div id="title-box" class="madoka-div">
+        <div id="title-container">
+            <div id="title">
+               projects°•
+            </div>
+            <div id="title-text">
+                ermmmm did someone turn off the lights??
+            </div>
+        </div>
+    </div>
+
+    <div id="back-box" class="madoka-div">
+        <a href="/projects.html">
+        <• back
+        </a>
+    </div>
+
+    <div id="marquee-container">
+        <marquee>
+            <span >
+                Simplifying the life I myself complicated.
+            </span>
+        </marquee>
+    </div>
+
+    <div id="border">
+        <div id="main" class="madoka-div"> 
+            <h2 style="text-align: left;">
+                Screen brightness controller from the terminal
+            </h2>
+            <div id="main-text">
+                <p>
+                    If you have used linux beyond flashing ubuntu once to try it out, then
+                    you know what a desktop environment is. They are these great graphical 
+                    applications that help you interact with your computer in a intuitive
+                    and straightforward way.
+                </p>
+
+                <img style="width: 50%; padding-left: 25%;" src="XFCE_4.20.png">
+                <p style="text-align:center; font-size: small;">- XFCE -</p>
+
+                <p>
+                    Desktop environments offer a lot of tools like a window manager, a notification
+                    system, or really usefull widgets like a network, volume, and bluetooth widgets.
+                </p>
+                <p>
+                    I'm a little bit too silly so I don't use a normal desktop environment on my laptop.
+                    Why? Because last summer I needed something to distract myself with so I instaled arch.
+                    Then I jusy kept falling through the rabithole. First I used cinnamon, a pretty normal
+                    desktop environment similar to windows, but then I started using vim and really liked 
+                    controlling everything without having to use my mouse, which led me to start using i3wm.
+                </p>
+                <p>
+                    I3wm is not a desktop environment, it is just a window manager that lets you create 
+                    and move windows in a convenient way by just usign keyboard shortcuts. It's similar
+                    to vim in the way that when you start everything feels weird and sluggish, but once
+                    you get the hang of it it's really confortable.
+                </p>
+                
+                <img style="width: 50%; padding-left: 25%;" src="i3wm.png">
+                <p style="text-align:center; font-size: small;">- i3wm -</p>
+
+                <p>
+                    The "problem" is that because of it being just a window manager it lacks a lot of important
+                    features out of the box. I had to spend one whole afternoon just to have some key widgets
+                    on my taskbar to be able to manage bluetooth, networks and volume.
+                </p>
+
+                <img style="width: 50%; padding-left: 25%;" src="task-bar.png">
+                <p style="text-align:center; font-size: small;">- this is my task bar 😭 -</p>
+
+                <p>
+                    One thing that I always neglected was being able to control my screen brightness
+                    (My keyboard keys for controlling brightness don't work in i3). It's 
+                    something I rarely change, and if I really wanted to change it I just logged out of i3,
+                    entered cinnamon and I just changed it from there. It was kind of inconvenient, 
+                    but it worked. I just didn't want to have to tinker with the i3 config anymore 
+                    because it sucks.
+                </p>
+                <p>
+                    This morning I had to change my brightness for a moment and I decided that this had 
+                    to stop.
+                    I had to do something to be able to change my brightness without much hustle, so 
+                    I went into the archwiki and found 
+                    <a href="https://man.archlinux.org/man/brightnessctl.1">brightnessctl</a>
+                    which is a handy command that lets you manage the brightness of your devices, like 
+                    your keyboard backlight, different leds you might have on your computer (for example near 
+                    your on/off button), or your screen backlight. 
+                </p>
+                <p>
+                    This was just what I needed, but it 
+                    had some problems: You have to remember the name of your screen backlight device, 
+                    you have to remember what the correct command options are, the name is kinda long and I'm lazy, 
+                    and, the worst of them, a device's brightness range feels incredibly arbitrary. 
+                    For example my brightness goes from 0 to 21333, and to set my brightness
+                    with this command I have to give an exact digit. 
+                </p>
+                <p>
+                    This is the way you're supposed to change your brighness:
+                </p>
+
+                <img style="width: 50%; padding-left: 25%;" src="brightnessctl.png">
+
+                <p>
+                    I'm not remembering all that, so 
+                    I made a quick bash script that let me change my brightness with a percentage.
+
+                </p>
+
+                <p>
+                    It just uses the brightnessctl command to get the current and max brightness, and then
+                    sets the brightness to the value corresponding to the percentage you entered. I also
+                    added two options to increase and decrease the brightness in 10% steps. 
+                </p>
+
+                <div style="display: flex">
+                    <img style="width: 30%; padding: 1vh" src="bright-digit.png">
+                    <img style="width: 30%; padding: 1vh" src="bright-plus.png">
+                    <img style="width: 30%; padding: 1vh" src="bright-minus.png">
+                </div>
+
+                <p>
+                    I had some trouble because bash scripting has a peculiar sintax that kinda sucks, 
+                    but it's finally done yipie. You can take a look at it on my 
+                    <a href="https://github.com/MimiMc4/mbright">github</a>. The "installation"
+                    (it's just a bash command) and usage instrucions are all explained there.
+                </p>
+                <p>
+                    I don't think anyone here will find any use of this command (I would be surprised if  
+                    even someone actually reads this to be honest, so I wouldn't expect an incompetent i3 user 
+                    like myself that can't change brightness like a normal person to be here).
+                    If you actually use it send me a message on 
+                    <a href="https://x.com/mimi_mc4">twitter</a>
+                    and we'll be messsy i3 pals :)
+                </p>
+
+
+                <p style="text-align: center;">Thanks for reading :)</p>
+            </div>
+        </div>
+    </div>
+    <div id="top-box" class="homura-div">
+         <a onclick="topFunction()" id="myBtn" title="Go to top">^ Top ^</a>
+    </div>
+</body>
+</html>

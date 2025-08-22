@@ -77,3 +77,19 @@
     cursor: pointer;
     color: white;
 }
+
+#textbox{
+    width: 100%; 
+    height: 6vh;
+    min-height: 4vh;
+    resize: vertical;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:medium;
+}
+::placeholder {
+    font-family: 'Times New Roman', Times, serif;
+    color: rgba(255, 255, 255,0.5);
+    font-size: larger;
+}
+

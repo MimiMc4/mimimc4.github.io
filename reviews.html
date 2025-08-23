@@ -15,15 +15,17 @@
             <div id="title">
                 reviews°•
             </div>
-            <div style="cursor: pointer;" id="title-text">
-                click here
+            <div id="title-text">
+                <span id="click-here" style="cursor: pointer;">
+                    click here
+                </span>
             </div>
         </div>
     </div>
 
 
     <script>
-        document.getElementById("title-text").addEventListener("click", springAlarm);
+        document.getElementById("click-here").addEventListener("click", springAlarm);
 
         function springAlarm() {
             var audio = new Audio('audio/alarm.wav');

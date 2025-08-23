@@ -48,9 +48,17 @@
             <div>
                 <a href="reviews.html">• reviews</a>
             </div>
-            <div id="left-bottom">
+            <div style="cursor: pointer;" id="left-bottom">
                 - nipah~☆ -
             </div>
+                <script>
+                    document.getElementById("left-bottom").addEventListener("click", nipah);
+
+                    function nipah() {
+                        var audio = new Audio('audio/nipah-sound.mp3');
+                        audio.play();
+                    }
+                </script>
         </div>
         <div id="main" class="madoka-div"> 
             <div id="main-text">
@@ -94,7 +102,7 @@
                 </p>
                 
                 <div id="spring-img">
-                    <img style="width: 100%;" src="/gif/spiral.gif">
+                    <img style="width: 100%; cursor: pointer;" src="/gif/spiral.gif">
                 </div>
                 <script>
                     document.getElementById("spring-img").addEventListener("click", springAlarm);

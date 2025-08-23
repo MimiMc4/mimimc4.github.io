@@ -81,7 +81,7 @@
 #textbox{
     width: 100%; 
     height: 6vh;
-    min-height: 4vh;
+    min-height: 5vh;
     max-height: 40vh;
     resize: vertical;
     color: white;

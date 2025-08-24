@@ -40,12 +40,94 @@
     <div id="border">
         <div id="main" class="madoka-div"> 
             <h2 style="text-align: left;">
-                I'm learning graphics programming!
+                I learned graphics programming!
             </h2>
             <div id="main-text">
                 <p>
+                    One of the coolest things you can do with a computer is to show
+                    things on the screen. In the past I have used Unity, Godot, and
+                    even SDL to do this kind of thing (to varying extents of success), 
+                    but I have always wondered how does the process work at a lower level, 
+                    so this summer I decided to finally start learning graphics programming.
                 </p>
+                <p>
+                    Drawing things on your screen is not a simple process, and it gets worse
+                    due to the fact that not all gpus work exactly the same. To solve this,
+                    some really smart people created the following system: The proggramer uses an 
+                    API that specifies the behaviour of many functions,
+                    but the functions themselves are not implemented. Then, the graphics card 
+                    vendors actually implement these functions, which are part of your drivers.
+                </p>
+                <p>
+                    This means that in order to draw anything, you have to use a graphics programming
+                    API. Right now there are two main graphics APIs: OpenGL and Vulkan. Vulkan is kind
+                    of the new industry standard due to being faster than OpenGL, but it works at a 
+                    lower level, so its way harder. That's why I ended up choosing OpenGL, wich is 
+                    a lot more begginer friendly, and you end up learning a lot about the rendering
+                    pipeline anyway.
+                </p>
+                <p>
+                    If you are interested in learning OpenGl, the best way possible is the OpenGL bible:
+                    <a href="learnopengl.com">learnopengl</a>. It starts from the very begginnig and 
+                    slowly builds upon itself until you are doing cool stuff. It's kind of hard in 
+                    the beggining, and you will need linear algebra, but its really fun.
+                </p>
+                <p>
+                    After setting everything up and linking every library (literal hell on windows), 
+                    the first step was to create a window with a triangle. This is like the "hello 
+                    world" of graphics programming, but unlike "hello world", "hello triangle" 
+                    introduces a lot of concepts about how everything works, so you have to go 
+                    through it many times until you get the idea.
+                </p>
+                <p>
+                    Then I was introduced to vertex and fragment shaders, wich are gpu programs that 
+                    run once for each vertex (the vertex shader) and each pixel (the fragment shader).
+                    For example here I had a simple fragment shader that changed the color of two 
+                    triangles using a sine function:
+                </p>
+                <div style="text-align: center;">
+                    <img style="width: 50%;" src="triangle.gif">
+                </div>
 
+                <p>
+                    After doing some more 2d stuff like using textures, it was time to actually do 
+                    something in 3d. It is at this point that math begins to appear. 
+                    In order to represent vertex coordinates in convenient ways, you have different 
+                    coordinates systems, and you have to use different transformation matrixes to 
+                    transform vertex coordinates from one space to another in order to have 
+                    everything renderer properly. 
+                </p>
+                <div style="text-align: center;">
+                    <img style="width: 80%; background-color: white;" src="coordinate_systems.png">
+                    <br>
+                    <span style="font-size: smaller;">
+                        - 
+                    <a href="https://learnopengl.com/Getting-started/Coordinate-Systems">source</a>
+                     -
+                    </p>
+                </div>
+                <p>
+                    This was my first 3d program, I was so happy :)
+                </p>
+                <div style="text-align: center;">
+                    <img style="width: 50%;" src="madohomurotate.gif">
+                </div>
+                <p>
+                    Then I rendered something more complex than a simple square, a cube! 
+                    But something strange happened at first.
+                </p>
+                <div style="text-align: center;">
+                    <div style="display: flex;">
+                    <img style="width: 40%; background-color: white;" src="coordinate_systems.png">
+                    <img style="width: 40%; background-color: white;" src="coordinate_systems.png">
+                    </div>
+                    <br>
+                    <span style="font-size: smaller;">
+                        - 
+                    <a href="https://learnopengl.com/Getting-started/Coordinate-Systems">source</a>
+                     -
+                    </p>
+                </div>
 
                 <p style="text-align: center;">Thanks for reading :)</p>
             </div>

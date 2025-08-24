@@ -52,16 +52,17 @@
                 </p>
                 <p>
                     Drawing things on your screen is not a simple process, and it gets worse
-                    due to the fact that not all gpus work exactly the same. To solve this,
-                    some really smart people created the following system: The proggramer uses an 
-                    API that specifies the behaviour of many functions,
+                    due to the fact that not all GPUs work exactly the same. To solve this,
+                    some really smart people created the following system: The programmer uses an 
+                    API, wich is a set of rules and function specifications. The API defines only
+                    what the functions must do, 
                     but the functions themselves are not implemented. Then, the graphics card 
                     vendors actually implement these functions, which are part of your drivers.
                 </p>
                 <p>
                     This means that in order to draw anything, you have to use a graphics programming
                     API. Right now there are two main graphics APIs: OpenGL and Vulkan. Vulkan is kind
-                    of the new industry standard due to being faster than OpenGL, but it works at a 
+                    of becoming the new industry standard due to being faster than OpenGL, but it works at a 
                     lower level, so its way harder. That's why I ended up choosing OpenGL, wich is 
                     a lot more begginer friendly, and you end up learning a lot about the rendering
                     pipeline anyway.
@@ -72,7 +73,7 @@
                     slowly builds upon itself until you are doing cool stuff. It's kind of hard in 
                     the beggining, and you will need linear algebra, but its really fun.
                 </p>
-                <p>
+                <p style="margin-top: 5vh;">
                     After setting everything up and linking every library (literal hell on windows), 
                     the first step was to create a window with a triangle. This is like the "hello 
                     world" of graphics programming, but unlike "hello world", "hello triangle" 
@@ -86,7 +87,7 @@
                     triangles using a sine function:
                 </p>
                 <div style="text-align: center;">
-                    <img style="width: 50%;" src="triangle.gif">
+                    <img style="width: 60%;" src="triangle.gif">
                 </div>
 
                 <p>
@@ -95,7 +96,11 @@
                     In order to represent vertex coordinates in convenient ways, you have different 
                     coordinates systems, and you have to use different transformation matrixes to 
                     transform vertex coordinates from one space to another in order to have 
-                    everything renderer properly. 
+                    everything renderer properly.
+                </p>
+                <p>
+                    In our code what we do is to create these matrixes and send them to the vertex shader,
+                    wich then transform the vertex coordinates by multiplying them with the different matrixes.
                 </p>
                 <div style="text-align: center;">
                     <img style="width: 80%; background-color: white;" src="coordinate_systems.png">
@@ -110,26 +115,67 @@
                     This was my first 3d program, I was so happy :)
                 </p>
                 <div style="text-align: center;">
-                    <img style="width: 50%;" src="madohomurotate.gif">
+                    <img style="width: 60%;" src="madohomurotate.gif">
                 </div>
                 <p>
+                    The rotation is created using a rotation matrix. A rotation matrix rotates 
+                    around an axis our vertices φ radians (or degrees), so just by increasing
+                    φ as time passes your vertices will rotate in a continuous motion.
+                </p>
+                <p>
                     Then I rendered something more complex than a simple square, a cube! 
-                    But something strange happened at first.
+                    But something strange happened at first. It turn out you have to 
+                    explicitly tell your GPU to make a depth test to show closer things 
+                    over further things.
+                </p>
+                <div style="display: flex; align-items: center; padding-left: 10%; padding-right: 3%;">
+                    <div style="width: 100%;">
+                        <img style="width: 90%;" src="biblical.gif">
+                    </div>
+                    <div style="width: 100%;">
+                        <img style="width: 90%;" src="cube.gif">
+                    </div>
+                </div>
+                <p style="text-align: center; font-size: small;">
+                    - Left: no depth testing || Right: depth testing -
+                </p>
+                <p>
+                    Now we can "copy and paste" our cube to have multiple cubes. 
                 </p>
                 <div style="text-align: center;">
-                    <div style="display: flex;">
-                    <img style="width: 40%; background-color: white;" src="coordinate_systems.png">
-                    <img style="width: 40%; background-color: white;" src="coordinate_systems.png">
-                    </div>
-                    <br>
-                    <span style="font-size: smaller;">
-                        - 
-                    <a href="https://learnopengl.com/Getting-started/Coordinate-Systems">source</a>
-                     -
-                    </p>
+                    <img style="width: 60%;" src="multicube.gif">
+                </div>
+                <div style="text-align: center; font-size: smaller;">
+                    - so much madohomu -
                 </div>
 
-                <p style="text-align: center;">Thanks for reading :)</p>
+                <p style="margin-top: 5vh;">
+                    At this point we can create poligons, apply textures, and modify their location.
+                    There is only one thing left to have the tools to make a simple 3d game: moving the 
+                    camera.
+                </p>
+                <p>
+                    Moving the camera is something that I found pretty funny, because instead of 
+                    moving the camera, you move everything else. For example, if I'm in a 3d space
+                    and I want to move the camera forwards, what actually happens is that the whole
+                    world moves backwards.
+                </p>
+                <p>
+                    Camera movements are somewhat unintuitive, but following closely the tutorial, I 
+                    was able to move around the scene using WASD and the mouse, and zoom with the mouse wheel.
+                </p>
+                <div style="text-align: center;">
+                    <img style="width: 60%;" src="mouse.gif">
+                </div>
+
+                <p>
+                    With this last step done I had completed the getting started section of 
+                    <a href="learnopengl.com">learnopengl</a>! I'm so happy I managed to get
+                    to the end. I feel like I learned a lot. Now my next project will be to make 
+                    a game without an engine, using OpenGL (it will be 2d tough).
+                </p>
+
+                <p style="text-align: center; text-indent: 0px;">Thanks for reading :)</p>
             </div>
         </div>
     </div>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meguca_mimi°•</title>
+    <link rel="stylesheet" href="/generalStyles.css">
+    <link rel="stylesheet" href="/textStyles.css">
+    <link rel="icon" href="/logos/logo-no-vect.png">
+    <script type="text/javascript" src="/js/functions.js"></script>
+
+</head>
+<body>
+    
+    <div id="title-box" class="madoka-div">
+        <div id="title-container">
+            <div id="title">
+               projects°•
+            </div>
+            <div id="title-text">
+                wasting my time but things look cool now
+            </div>
+        </div>
+    </div>
+
+    <div id="back-box" class="madoka-div">
+        <a href="/projects.html">
+        <• back
+        </a>
+    </div>
+
+    <div id="marquee-container">
+        <marquee>
+            <span >
+                when the file has a dot or something
+            </span>
+        </marquee>
+    </div>
+
+    <div id="border">
+        <div id="main" class="madoka-div"> 
+            <h2 style="text-align: left;">
+                Managing my dotfiles
+            </h2>
+            <div id="main-text">
+                <p>
+                    If you check the last entry's date you can see that this has been a pretty busy semester at uni (and 
+                    it still is, I should be studying right now...), so this will be a short one.
+                </p>
+                <p>
+                    A few weeks back I was procrastinating working on some shitty app we have to make for one class,
+                    so instead of working I just installed arch linux on my main pc. 
+                    I've been using arch on my laptop
+                    for a while now, but I still had windows on my desktop (ltsc tho). In theory I was going to wait 
+                    until winter break for the change, but I just couldn't wait, so I just installed it.
+                </p>
+                <p>
+                    As always I had to redo the instalation twice because I always mess up setting up grub, but the installation is 
+                    very straightforward, you just follow the <a href="https://wiki.archlinux.org/title/Installation_guide">wiki instructions</a>.
+                </p>
+                <p>
+                    Using arch is great and it has some comfy tools (ily pacman), but setting up everything is kinda rough,
+                    especially when you have already spent time configuring many things to your liking once, so I wanted some good
+                    way to share my config files.
+                </p>
+                <p>
+                    On the internet I had already seen some people hosting their own config files on GitHub, but I was 
+                    a bit unsure on how to link files on a git repository to my .config directory. Looking around I found
+                    that there is already a tool made for this exact problem: "stow".
+                </p>
+                <p>
+                    <a href="https://linux.die.net/man/8/stow">Stow</a> is a tool that manages symlinks between directories. You can use it to 
+                    link directories on your git repository to your .config directory. Setting everything up is easy, just search a guide 
+                    on google.
+                </p>
+                <p>
+                    I've created my dotfiles repo, with this structure:
+                </p>
+                <center> <!-- didnt know this tag existed lol, pretty useful--> 
+                    <img style="margin-top: 10px;" src="tree.png" width="60%">
+                </center>
+                <p>
+                    You can see that I can have my config files in there which is great. Now if I make any change on the repo, I can just 
+                    pull from my other computer and have everything ready to go.
+                </p>
+                <p>
+                    I don't think I'll use i3 on my desktop computer though (I'm using cinnamon for now), but is good to know that I can just switch
+                    and have everything configured just like my laptop. (There were some compatibility issues with some applets, but everything 
+                    should be ok now...). 
+                </p>
+                <p>
+                    My main reason to make this was neovim. Setting up the package manager and the plugins was a pain, 
+                    so I didn't want to start from scratch. Now I have everything exactly as I have it on my laptop (and some more, I finally installed 
+                    an lsp).
+                </p>
+                <p>
+                    Linking alacritty and my bashrc files wasn't as necessary, but now I can easily use sus instead of sudo on all my computers 
+                    from now on, so it's a win.
+                </p>
+                <p>
+                    As always, you can check the <a href="https://github.com/MimiMc4/dotfiles">GitHub repo</a> if you want to checkout my config
+                    files. Probably they won't be useful for anybody else though.
+                </p>
+                <p>
+                    Last thing: I've been playing around with the linux kernel and kernel modules, so maybe this winter break I'll upload
+                    something related. See you next time!!
+                </p>
+                <p style="text-align: center; text-indent: 0px;">Thanks for reading :)</p>
+            </div>
+        </div>
+    </div>
+    <div id="top-box" class="homura-div">
+         <a onclick="topFunction()" id="myBtn" title="Go to top">^ Top ^</a>
+    </div>
+</body>
+</html>

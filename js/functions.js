@@ -5,3 +5,8 @@ function topFunction() {
   // For Chrome, Firefox, IE and Opera
   document.documentElement.scrollTop = 0; 
 }
+
+function nipah() {
+  var audio = new Audio('audio/nipah-sound.mp3');
+  audio.play();
+}

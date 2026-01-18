@@ -136,6 +136,11 @@ a:active {
     text-align: center;
 }
 
+#img{
+    display: block;
+    margin: auto;
+}
+
 #top-box{
     position: relative;
     margin: auto;

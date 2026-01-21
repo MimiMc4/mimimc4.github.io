@@ -96,6 +96,7 @@
         </div>
         <script>
                 document.getElementById("warning-img").addEventListener("click", XPwarn);
+                document.getElementById("warning-img").addEventListener("click", XPclone);
 
                 function XPwarn() {
 
@@ -103,20 +104,27 @@
                     audio.play();
                 }
 
-                function XPclone() {
-                    /*
+                function XPclone(event) { 
                     var myImg = document.createElement('img');
-                    myImg.setAttribute('src', "img/warning.png");
+                    myImg.setAttribute('src', "/img/warning.png");
 
-                    var top = Math.random();
-                    top = top * 300;
-                    var left = Math.random();
-                    left = left * 300;
+                    var offsetY = Math.random() * (-100);
+                    var offsetX = ((Math.random() - 0.5) * 100) * Math.pow(-1, Math.floor(Math.random()*10));
+
+                    var top = event.pageY + offsetY;
+                    var left = event.pageX + offsetX;
+
+                    myImg.style.position = "absolute"
                     myImg.style.top = top + "px";
                     myImg.style.left = left + "px";
+                    
+                    myImg.draggable = false;
+                    myImg.style.userSelect = "none";
 
-                    document.getElementById('body').appendChild(myImg);
-                    */
+                    myImg.addEventListener("click", XPwarn);
+                    myImg.addEventListener("click", XPclone);
+
+                    document.body.appendChild(myImg);
                 }
         </script>
         <div id="main" class="madoka-div"> 

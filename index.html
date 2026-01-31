@@ -101,6 +101,7 @@
                 function XPwarn() {
 
                     var audio = new Audio('audio/XP_error.mp3');
+                    audio.volume = 0.4;
                     audio.play();
                 }
 
@@ -134,7 +135,9 @@
 
                 function slotWin() {
                     var audio = new Audio('audio/Slot.mp3');
+                    audio.volume = 0.4;
                     audio.play();
+
                     document.getElementById("premio-img").removeEventListener("click", slotWin);
                     document.getElementById("money-bill").style.display = "block";
                     document.getElementById("money-coin").style.display = "block";

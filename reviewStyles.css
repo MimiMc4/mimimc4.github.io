@@ -22,7 +22,7 @@ p {
     display: none;
 
     position: absolute;
-    z-index: 1;
+    z-index: 100;
     width: 400px;
     padding: 15px;
     bottom: 0%;
@@ -52,4 +52,61 @@ p {
 
 .review-img{
     width: 300px;
+}
+
+
+.status-badges {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    gap: 4px;
+    z-index: 5; 
+}
+
+.badge {
+    box-sizing: border-box; 
+    
+    width: 22px;
+    height: 22px;
+    
+    background-color: #16325B; 
+    
+    border-radius: 0px; 
+    font-size: 14px; 
+    font-weight: bold;
+    
+    display: inline-flex;
+
+    vertical-align: text-bottom;
+
+    align-items: center;
+    justify-content: center;
+    cursor: help;
+    
+    box-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+    
+    padding: 0;
+    margin: 0;
+}
+
+.badge.star {
+    color: #FFDC7F;
+    border: 1px solid #FFDC7F;
+    font-size: 15px; 
+}
+
+.badge.rewatch {
+    color: #A0E6FF; 
+    border: 1px solid #A0E6FF;
+    font-size: 15px;
+}
+
+.badge.drop {
+    color: #FF8888;
+    border: 1px solid #FF8888;
+    
+    font-size: 20px;         
+    line-height: 20px;      
+    
 }

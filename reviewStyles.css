@@ -3,8 +3,8 @@ p {
 }
 
 .popup-container {
-    flex: 0 0 calc(33.333% - 10px);
-    max-width: calc(33.333% - 10px); 
+    flex: 0 0 calc(25% - 15px); 
+    max-width: calc(25% - 15px); 
     box-sizing: border-box;
     position: relative;
     display: inline-block;
@@ -23,9 +23,9 @@ p {
 
     position: absolute;
     z-index: 100;
-    width: 400px;
+    width: 350px;
     padding: 15px;
-    bottom: 0%;
+    bottom: -10%;
     left: 50%;
     transform: translateX(-50%);
     margin-bottom: 10px;

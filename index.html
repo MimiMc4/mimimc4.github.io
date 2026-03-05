@@ -108,9 +108,13 @@
                 function XPclone(event) { 
                     var myImg = document.createElement('img');
                     myImg.setAttribute('src', "/img/warning.png");
+                    myImg.setAttribute('style', "cursor: pointer");
 
-                    var offsetY = Math.random() * (-100);
-                    var offsetX = ((Math.random() - 0.5) * 100) * Math.pow(-1, Math.floor(Math.random()*10));
+                    var distance = 100;
+
+                    var offsetX = (Math.random() * 2 - 1) * distance;
+                    var offsetY = (Math.random() * 2 - 1) * distance;
+
 
                     var top = event.pageY + offsetY;
                     var left = event.pageX + offsetX;

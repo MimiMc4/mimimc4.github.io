@@ -128,7 +128,7 @@ a:active {
 
 @media (max-width: 800px) {
     #title-box {
-        width: 95%;
+        width: 90%;
     }
 
     #title-text {
@@ -136,7 +136,7 @@ a:active {
     }
 
     #marquee-container {
-        width: calc(95% + 23px);
+        width: calc(90% + 23px);
     }
 
     #mobile-bar {
@@ -152,7 +152,7 @@ a:active {
     }
 
     #border {
-        width: 95%;
+        width: 90%;
         display: block;
     }
     #left-bar {

@@ -31,8 +31,9 @@
 
 @media (max-width: 800px){
     #premio-img{
-        right: -85px;
-        bottom: 150px;
+        width: 70px;
+        right: -30px;
+        bottom: 1s0px;
     }
     #warning-img {
         left: -15px;

@@ -43,8 +43,7 @@ a:active {
 #title-box {
     position: relative;
     margin: auto;
-    width: 50%;
-    min-width: 600px;
+    width: 60%;
     padding: 10px;
     margin-bottom: 10px;
     margin-top: 5vh;
@@ -76,9 +75,9 @@ a:active {
 
     position: relative;
     margin: auto;
-    width: calc(50% + 26px);
-    min-width: 626px;
-    padding: 2px 10px;
+    width: calc(60% + 23px);
+    padding-right: 10px;
+    padding-left: 10px;
     margin-bottom: 10px;
 
     white-space: nowrap;
@@ -91,8 +90,7 @@ a:active {
 #border {
     position: relative;
     margin: auto;
-    width: 50%;
-    min-width: 600px;
+    width: 60%;
     padding: 10px;   
     
     border-style: solid;
@@ -114,12 +112,55 @@ a:active {
 #main-text {
     text-align: left;
 }
+
 #left-bar {
 
     position: relative;
     width: 20%;
     padding: 10px;
+    margin-right: 10px;
 
+}
+
+#mobile-bar {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    #title-box {
+        width: 80%;
+    }
+
+    #title-text {
+        font-size: 16px;
+    }
+
+    #marquee-container {
+        width: calc(80% + 23px);
+    }
+
+    #mobile-bar {
+        display: flex;             
+        flex-wrap: wrap;          
+        justify-content: space-evenly;
+        align-items: center;
+        
+        margin-bottom: 10px;
+        padding: 10px;
+        
+        font-size: 18px;           
+    }
+
+    #border {
+        width: 80%;
+        display: block;
+    }
+    #left-bar {
+        display: none;
+    }
+    #main {
+        width: auto;
+    }
 }
 
 #left-bottom{

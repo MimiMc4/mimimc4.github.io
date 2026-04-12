@@ -50,6 +50,23 @@ p {
     gap: 15px;
 }
 
+@media (max-width: 800px) {
+    .popup-container {
+        flex: 0 0 calc(33.33% - 10px); 
+        max-width: calc(33.33% - 10px);
+    }
+    .popup-content {
+        width: 80vw; 
+        max-width: 350px; 
+        
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        bottom: auto;
+    }
+}
+
 .review-img{
     width: 300px;
 }

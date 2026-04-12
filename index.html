@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
     <meta property="og:description" content="mimi's personal page - cs student && moe enthusiast!!" />
     <meta property="og:image" content="https://mimimc4.github.io/logos/logo-no-vect.png" />
     <meta property="og:url" content="https://mimimc4.github.io" />
-    <meta name="theme-color" content="#FFDC7F"> 
+    <meta name="theme-color" content="#FFDC7F">
 
     <title>meguca_mimi°•</title>
     <link rel="canonical" href="https://mimimc4.github.io/" />
@@ -15,17 +16,19 @@
     <link rel="stylesheet" href="indexStyles.css">
     <link rel="icon" href="logos/logo-no-vect.png">
 
-    
+
     <script type="text/javascript" src="/js/functions.js"></script>
 
 </head>
+
 <body>
     <img id="money-bill" src="gif/money_falling.gif">
     <img id="money-coin" src="gif/coin.gif">
     <div id="title-box" class="madoka-div">
         <div id="title-container">
             <div id="title">
-                mimi<a style="color: white; text-decoration: none;" href="javascript:window.location.href=atob('dmVuZG9yLWNhY2hlLmh0bWw=');">°•</a>
+                mimi<a style="color: white; text-decoration: none;"
+                    href="javascript:window.location.href=atob('dmVuZG9yLWNhY2hlLmh0bWw=');">°•</a>
             </div>
             <div id="title-text">
                 thanks for stopping by :)
@@ -33,15 +36,24 @@
         </div>
     </div>
 
+
     <div id="marquee-container">
-        <marquee >
-            <span >
+        <marquee>
+            <span>
                 hello world
                 <img id="katamari-img" src="gif/katamari.webp">
             </span>
         </marquee>
     </div>
+
     <div id="border">
+        <div id="mobile-bar" class="madoka-div">
+            <a href="index.html" class="active">home</a>
+            <a href="about.html">about</a>
+            <a href="projects.html">projects</a>
+            <a href="reviews.html">reviews</a>
+            <a href="achievements.html">achievements</a>
+        </div>
         <div id="left-bar" class="madoka-div">
             <div>hell yeah</div>
             <div>hell yeah</div>
@@ -64,47 +76,8 @@
             <div style="cursor: pointer;" id="left-bottom" onclick="nipah()">
                 - nipah~☆ -
             </div>
-            <img id="warning-img" style="cursor: pointer;" src="img/warning.png">
         </div>
-        <script>
-                document.getElementById("warning-img").addEventListener("click", XPwarn);
-                document.getElementById("warning-img").addEventListener("click", XPclone);
-
-                function XPwarn() {
-
-                    var audio = new Audio('audio/XP_error.mp3');
-                    audio.volume = 0.4;
-                    audio.play();
-                }
-
-                function XPclone(event) { 
-                    var myImg = document.createElement('img');
-                    myImg.setAttribute('src', "/img/warning.png");
-                    myImg.setAttribute('style', "cursor: pointer");
-
-                    var distance = 100;
-
-                    var offsetX = (Math.random() * 2 - 1) * distance;
-                    var offsetY = (Math.random() * 2 - 1) * distance;
-
-
-                    var top = event.pageY + offsetY;
-                    var left = event.pageX + offsetX;
-
-                    myImg.style.position = "absolute"
-                    myImg.style.top = top + "px";
-                    myImg.style.left = left + "px";
-                    
-                    myImg.draggable = false;
-                    myImg.style.userSelect = "none";
-
-                    myImg.addEventListener("click", XPwarn);
-                    myImg.addEventListener("click", XPclone);
-
-                    document.body.appendChild(myImg);
-                }
-        </script>
-        <div id="main" class="madoka-div"> 
+        <div id="main" class="madoka-div">
             <img id="premio-img" style="cursor: pointer;" src="gif/premio.gif">
             <script>
                 document.getElementById("premio-img").addEventListener("click", slotWin);
@@ -121,22 +94,22 @@
                         document.getElementById("money-bill").style.display = "none";
                         document.getElementById("money-coin").style.display = "none";
                         document.getElementById("premio-img").addEventListener("click", slotWin);
-                        
-                    },3000)
+
+                    }, 3000)
                 }
             </script>
             <h2 style="text-align: left;">
-              Become meguca
+                Become meguca
             </h2>
             <div id="main-text">
                 <p>Welcome, internet explorers!</p>
                 <p>
-                    This is my website, a small space in which 
+                    This is my website, a small space in which
                     you can read about the many things I take interest in and whaterver
                     I end up comming up with.
                 </p>
                 <p>
-                    I am a computer science student who enjoys tinkering with technology 
+                    I am a computer science student who enjoys tinkering with technology
                     in many different ways, but I am also an enthusiast of music, videogames,
                     anime, manga, and visual novels.
                 </p>
@@ -144,54 +117,94 @@
                     Feel free to explore and click around,
                     as I'm trying to make this website somewhat interactive ^^.
                 </p>
-                </div>
-                
-                <script>
+            </div>
 
-                </script>
-                <div id="img-container" style="margin-top: 5vh;">
-                    <h3 style="text-align: left;">
-                        Tell me something!!
-                    </h3>
-                    <form style="padding-bottom: 3%;" action="https://formsubmit.co/megucamimi@gmail.com" method="POST">
-                
-                        <textarea class="madoka-div" id="textbox" name="message"
-                            placeholder="Send me an anonymous message :" required></textarea>
-                
-                        <input type="hidden" name="_next" value="https://mimimc4.github.io/msgConfirm.html">
-                        <input type="hidden" name="_subject" value="New anonymous message!">
-                
-                        <input type="hidden" name="_captcha" value="false">
-                
-                        <input type="text" name="_honey" style="display:none">
-                
-                        <div style="text-align: center; padding-top: 2%;">
-                            <button class="madoka-div" id="msg-button" type="submit" title="send your message">
-                                <a>
-                                    Send
-                                </a>
-                            </button>
-                        </div>
-                    </form>
+            <script>
 
-                    <img id="madohomu-img" src="/gif/madohomu_cuddle_white.gif" />
-                    <div style="text-align: center; margin-top: 1em; margin-bottom: 1em;">
-                        <span id="waow" style="cursor: pointer;">- waow -</span>
+            </script>
+            <div id="img-container" style="margin-top: 5vh;">
+                <h3 style="text-align: left;">
+                    Tell me something!!
+                </h3>
+                <form style="padding-bottom: 3%;" action="https://formsubmit.co/megucamimi@gmail.com" method="POST">
+
+                    <textarea class="madoka-div" id="textbox" name="message"
+                        placeholder="Send me an anonymous message :" required></textarea>
+
+                    <input type="hidden" name="_next" value="https://mimimc4.github.io/msgConfirm.html">
+                    <input type="hidden" name="_subject" value="New anonymous message!">
+
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <input type="text" name="_honey" style="display:none">
+
+                    <div style="text-align: center; padding-top: 2%;">
+                        <button class="madoka-div" id="msg-button" type="submit" title="send your message">
+                            <a>
+                                Send
+                            </a>
+                        </button>
                     </div>
-                    <script>
-                        document.getElementById("waow").addEventListener("click", waowSound);
+                </form>
 
-                        function waowSound() {
+                <img id="madohomu-img" src="/gif/madohomu_cuddle_white.gif" />
+                <div style="text-align: center; margin-top: 1em; margin-bottom: 1em;">
+                    <span id="waow" style="cursor: pointer;">- waow -</span>
+                </div>
+                <script>
+                    document.getElementById("waow").addEventListener("click", waowSound);
 
-                            var audio = new Audio('audio/waow.ogg');
-                            audio.play();
-                        }
-                    </script>
-                </div>
-                
-                </div>
+                    function waowSound() {
+
+                        var audio = new Audio('audio/waow.ogg');
+                        audio.play();
+                    }
+                </script>
+            </div>
+
+        </div>
+        <img id="warning-img" style="cursor: pointer;" src="img/warning.png">
+        <script>
+            document.getElementById("warning-img").addEventListener("click", XPwarn);
+            document.getElementById("warning-img").addEventListener("click", XPclone);
+
+            function XPwarn() {
+
+                var audio = new Audio('audio/XP_error.mp3');
+                audio.volume = 0.4;
+                audio.play();
+            }
+
+            function XPclone(event) {
+                var myImg = document.createElement('img');
+                myImg.setAttribute('src', "/img/warning.png");
+                myImg.setAttribute('style', "cursor: pointer");
+
+                var distance = 100;
+
+                var offsetX = (Math.random() * 2 - 1) * distance;
+                var offsetY = (Math.random() * 2 - 1) * distance;
+
+
+                var top = event.pageY + offsetY;
+                var left = event.pageX + offsetX;
+
+                myImg.style.position = "absolute"
+                myImg.style.top = top + "px";
+                myImg.style.left = left + "px";
+
+                myImg.draggable = false;
+                myImg.style.userSelect = "none";
+
+                myImg.addEventListener("click", XPwarn);
+                myImg.addEventListener("click", XPclone);
+
+                document.body.appendChild(myImg);
+            }
+        </script>
     </div>
     <div id="random-word">hello </div>
 
 </body>
+
 </html>

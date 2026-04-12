@@ -3,18 +3,21 @@ p {
  }
 
 #main {
-    width: 100%;
-    padding-left: 5vh;
-    padding-right: 5vh;
+    width: auto;
 }
 
 #back-box {
     position: relative;
     margin: auto;
     margin-bottom: 10px;
-    width: 50%;
-    min-width: 600px;
+    width: 60%;
     padding: 10px;   
 
     text-align: left;
+}
+
+@media (max-width: 800px) {
+    #back-box {
+        width: 80%;
+    }
 }

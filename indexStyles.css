@@ -1,30 +1,14 @@
-#mobile-warning {
-
-    position: fixed;
-    display: none;
-    margin-top: 40%;
+#money-bill, #money-coin {
+    position: fixed;     
+    top: 0;
     left: 0;
-    right: 0;
-    z-index: 1000;
+    width: 100vw;       
+    height: 100vh;       
+    z-index: 9999;       
+    object-fit: cover;   
+    pointer-events: none; 
+    display: none;      
 }
-
-#money-bill {
-    position: absolute;
-    top:-5vh;
-    display: none;
-    width: 100%;
-    z-index: 1;
-    object-fit: cover;
-}
-
-#money-coin {
-    position: absolute;
-    top:-5vh;
-    display: none;
-    width: 100%;
-    z-index: 1;
-}
-
 
 #katamari-img{
     width: 17px;
@@ -43,6 +27,17 @@
     position: absolute;
     left: -65px;
     bottom:50px;
+}
+
+@media (max-width: 800px){
+    #premio-img{
+        right: -85px;
+        bottom: 150px;
+    }
+    #warning-img {
+        left: -15px;
+        bottom: 150px;
+    }
 }
 
 

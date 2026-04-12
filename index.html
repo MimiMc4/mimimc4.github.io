@@ -20,34 +20,6 @@
 
 </head>
 <body>
-
-    <div id="mobile-warning" class="madoka-div">
-        <p style="text-align: center;">
-            ⚠️ ⚠️ This page is intended for being viewed on a computer ⚠️ ⚠️
-        </p>
-        <p style="text-align: center;">
-            If you're watching this on mobile some things may not display correctly
-        </p>
-        <button id="close-warning" class="madoka-div" style="margin-left: 50%;" >❌ <a>close</a> ❌</button>
-    </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                const warning = document.getElementById("mobile-warning");
-                const closeBtn = document.getElementById("close-warning");
-
-                warning.style.display = "block";
-
-                closeBtn.addEventListener("click", function () {
-                    warning.style.display = "none";
-
-                });
-            }
-        });
-    </script>
-
-
-
     <img id="money-bill" src="gif/money_falling.gif">
     <img id="money-coin" src="gif/coin.gif">
     <div id="title-box" class="madoka-div">
@@ -184,7 +156,7 @@
                     <form style="padding-bottom: 3%;" action="https://formsubmit.co/megucamimi@gmail.com" method="POST">
                 
                         <textarea class="madoka-div" id="textbox" name="message"
-                            placeholder="Send me an anonymous message :)&#10;(You can resize the textbox)" required></textarea>
+                            placeholder="Send me an anonymous message :" required></textarea>
                 
                         <input type="hidden" name="_next" value="https://mimimc4.github.io/msgConfirm.html">
                         <input type="hidden" name="_subject" value="New anonymous message!">

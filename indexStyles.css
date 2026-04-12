@@ -39,6 +39,9 @@
         left: -15px;
         bottom: 150px;
     }
+    #random-word {
+        display: none;
+    }
 }
 
 

@@ -20,8 +20,7 @@
 }
 
 @media (max-width: 800px) {
-    .game-cell{
-        padding: none;
-        gap: none;
+    .game-cell {
+        padding: 2px; 
     }
 }

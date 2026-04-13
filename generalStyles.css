@@ -59,7 +59,7 @@ a:active {
 #title {
     font-size: 40px;
     font-weight: bold;
-    width: 20%;
+    width: auto;
     margin-left: 2vh;
 }
 
@@ -67,7 +67,10 @@ a:active {
 
 #title-text {
     text-align: center;
-    width: 50%;
+    width: auto;
+    margin-left: auto;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 #marquee-container {
@@ -103,8 +106,8 @@ a:active {
 
 #main {
     position: relative;
-    width: 73%;
     padding: 10px;
+    width: auto;
 
     text-align: center;
 }
@@ -115,8 +118,9 @@ a:active {
 
 #left-bar {
 
+    width: auto;
+    min-width: 120px;
     position: relative;
-    width: 20%;
     padding: 10px;
     margin-right: 10px;
 
@@ -132,7 +136,7 @@ a:active {
     }
 
     #title-text {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     #marquee-container {
@@ -157,9 +161,6 @@ a:active {
     }
     #left-bar {
         display: none;
-    }
-    #main {
-        width: auto;
     }
 }
 
@@ -193,4 +194,21 @@ a:active {
 
 #myBtn {
     cursor: pointer;
+}
+
+table{
+    width: 100%;
+}
+th{
+    min-width: 50px;
+    padding: 10px;
+    text-align: center;
+
+}
+td{
+    padding: 10px;
+    width: auto;
+}
+tr{
+    width: auto;
 }

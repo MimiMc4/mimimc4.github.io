@@ -134,7 +134,9 @@ a:active {
     #title-box {
         width: 90%;
     }
-
+    #title {
+        font-size: 20px;
+    }
     #title-text {
         font-size: 14px;
     }

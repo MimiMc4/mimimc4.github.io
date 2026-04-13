@@ -12,6 +12,7 @@
 }
 .perfect-badge {
     width: 100%;
+    max-width: 120px;
     object-fit: contain;
 }
 .no-perfect {
@@ -19,10 +20,8 @@
 }
 
 @media (max-width: 800px) {
-    .game-icon {
-        max-width: 32px;
-    }
-    .perfect-badge {
-        max-width: 32px;
+    .game-cell{
+        padding: none;
+        gap: none;
     }
 }

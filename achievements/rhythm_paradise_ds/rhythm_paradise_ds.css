@@ -7,7 +7,7 @@
 }
 .game-icon {
     width: 100%;
-    max-width: 64px;
+    max-width: 50px;
     object-fit: contain;
 }
 .perfect-badge {
@@ -16,7 +16,8 @@
     object-fit: contain;
 }
 .no-perfect {
-    height: 25px;
+    width: 100%;
+    max-width: 80px;
 }
 
 @media (max-width: 800px) {
